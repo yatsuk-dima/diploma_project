@@ -128,11 +128,10 @@ REST API для системи адаптивного тестування на 
 
 ### Docker Compose (рекомендовано)
 
-**Передумови:** Docker, Docker Compose
+> `docker-compose.yml` знаходиться в **корені** репозиторію. Всі команди виконувати звідти.
 
 ```bash
-# 1. Налаштувати змінні середовища
-cd back
+# 1. Налаштувати змінні середовища (в корені репо)
 cp .env.example .env
 
 # 2. Збілдити і запустити стек
@@ -146,10 +145,6 @@ docker compose exec backend python seed.py
 ```
 
 Застосунок доступний на **`http://localhost`** · API-документація: **`http://localhost/api/docs`**
-
-> **Важливо:** відкривати `http://localhost` (порт 80). Фронт-контейнер вбудований і проксює `/api → backend:8000`.
-
----
 
 ### Локальна розробка (без Docker)
 
@@ -416,7 +411,7 @@ docker compose restart celery
 
 ```bash
 # Перший запуск
-git clone <repo> && cd back
+git clone <repo> && cd diploma_project
 cp .env.example .env   # встановити SECRET_KEY, паролі, CORS_ORIGINS
 docker compose up -d --build
 docker compose exec backend alembic upgrade head

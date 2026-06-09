@@ -95,33 +95,18 @@ front/
 
 ### Варіант 1 — Docker Compose (рекомендовано)
 
-**Передумови:** Docker, Docker Compose
+> `docker-compose.yml` знаходиться в **корені** репозиторію. Всі команди виконувати звідти.
 
-**Крок 1.** Налаштувати змінні середовища:
 ```bash
-cd back
 cp .env.example .env
-```
-
-**Крок 2.** Збілдити і запустити стек:
-```bash
 docker compose up -d --build
-```
-
-**Крок 3.** Застосувати міграції БД:
-```bash
 docker compose exec backend alembic upgrade head
-```
-
-**Крок 4.** *(опційно)* Завантажити демонстраційні дані:
-```bash
-docker compose exec backend python seed.py
+docker compose exec backend python seed.py  # опційно
 ```
 
 Застосунок доступний на **`http://localhost`**.
 
-> **Важливо:** відкривати саме `http://localhost` (порт 80), а не `npm run dev`.
-> Фронт-контейнер вже вбудований і включає проксі `/api → backend:8000`.
+---
 
 ---
 
@@ -358,7 +343,7 @@ docker run --rm -p 8080:80 adaptive-frontend
 # → http://localhost:8080
 
 # У складі повного стеку (рекомендовано)
-cd back && docker compose up -d --build frontend
+docker compose up -d --build frontend
 ```
 
 ---
