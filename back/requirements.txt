@@ -1,0 +1,20 @@
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+sqlalchemy[asyncio]==2.0.36
+asyncpg==0.30.0
+psycopg2-binary==2.9.10
+alembic==1.14.0
+PyJWT==2.10.1
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+celery[redis]==5.4.0
+redis==5.2.1
+catsim==0.17.0
+numpy==1.26.4
+scipy==1.13.1
+pydantic-settings==2.6.1
+slowapi==0.1.9
+python-multipart==0.0.20
+# dev / test
+pytest==8.3.4
+pytest-asyncio==0.24.0

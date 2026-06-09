@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+front/dist/
+front/.cache/
+front/coverage/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+back/postgres_data/
+
+# Logs
+*.log
+logs/
